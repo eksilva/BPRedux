@@ -1,0 +1,23 @@
+{
+  "name": "bpredux",
+  "version": "1.0.0",
+  "description": ">**BPRedux** is a trivial financial calculator based on desired risks/outcomes, outputting suggested allocation of funds. BPRedux is also a project for me to learn **Redux** state management.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eksilva/BPRedux.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eksilva/BPRedux/issues"
+  },
+  "homepage": "https://github.com/eksilva/BPRedux#readme",
+  "dependencies": {
+    "react": "^17.0.2"
+  }
+}
