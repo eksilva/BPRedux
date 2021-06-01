@@ -4,7 +4,9 @@
   "description": ">**BPRedux** is a trivial financial calculator based on desired risks/outcomes, outputting suggested allocation of funds. BPRedux is also a project for me to learn **Redux** state management.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode=production",
+    "devBuild": "webpack -d --watch",
+    "devStart": "nodemon server/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,7 @@
   "homepage": "https://github.com/eksilva/BPRedux#readme",
   "dependencies": {
     "babel-loader": "^8.2.2",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -30,6 +33,7 @@
     "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.2",
     "@babel/preset-react": "^7.13.13",
+    "nodemon": "^2.0.7",
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.0"
   }
