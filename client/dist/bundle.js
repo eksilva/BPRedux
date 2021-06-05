@@ -122,6 +122,66 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 
 /***/ }),
 
+/***/ "./client/src/reducers/currentBonds.js":
+/*!*********************************************!*\
+  !*** ./client/src/reducers/currentBonds.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar currentBondsReducer = function currentBondsReducer() {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;\n  var action = arguments.length > 1 ? arguments[1] : undefined;\n\n  switch (action.type) {\n    case \"BONDS\":\n      state = action.payload;\n      return state;\n\n    default:\n      return state;\n  }\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (currentBondsReducer);\n\n//# sourceURL=webpack:///./client/src/reducers/currentBonds.js?");
+
+/***/ }),
+
+/***/ "./client/src/reducers/currentForeign.js":
+/*!***********************************************!*\
+  !*** ./client/src/reducers/currentForeign.js ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar currentForeignReducer = function currentForeignReducer() {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;\n  var action = arguments.length > 1 ? arguments[1] : undefined;\n\n  switch (action.type) {\n    case \"FOREIGN\":\n      state = action.payload;\n      return state;\n\n    default:\n      return state;\n  }\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (currentForeignReducer);\n\n//# sourceURL=webpack:///./client/src/reducers/currentForeign.js?");
+
+/***/ }),
+
+/***/ "./client/src/reducers/currentLargeCap.js":
+/*!************************************************!*\
+  !*** ./client/src/reducers/currentLargeCap.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar currentLargeCapReducer = function currentLargeCapReducer() {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;\n  var action = arguments.length > 1 ? arguments[1] : undefined;\n\n  switch (action.type) {\n    case \"LARGECAP\":\n      state = action.payload;\n      return state;\n\n    default:\n      return state;\n  }\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (currentLargeCapReducer);\n\n//# sourceURL=webpack:///./client/src/reducers/currentLargeCap.js?");
+
+/***/ }),
+
+/***/ "./client/src/reducers/currentMidCap.js":
+/*!**********************************************!*\
+  !*** ./client/src/reducers/currentMidCap.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar currentMidCapReducer = function currentMidCapReducer() {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;\n  var action = arguments.length > 1 ? arguments[1] : undefined;\n\n  switch (action.type) {\n    case \"MIDCAP\":\n      state = action.payload;\n      return state;\n\n    default:\n      return state;\n  }\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (currentMidCapReducer);\n\n//# sourceURL=webpack:///./client/src/reducers/currentMidCap.js?");
+
+/***/ }),
+
+/***/ "./client/src/reducers/currentSmallCap.js":
+/*!************************************************!*\
+  !*** ./client/src/reducers/currentSmallCap.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar currentSmallCapReducer = function currentSmallCapReducer() {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;\n  var action = arguments.length > 1 ? arguments[1] : undefined;\n\n  switch (action.type) {\n    case \"SMALLCAP\":\n      state = action.payload;\n      return state;\n\n    default:\n      return state;\n  }\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (currentSmallCapReducer);\n\n//# sourceURL=webpack:///./client/src/reducers/currentSmallCap.js?");
+
+/***/ }),
+
 /***/ "./client/src/reducers/index.js":
 /*!**************************************!*\
   !*** ./client/src/reducers/index.js ***!
@@ -130,7 +190,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _riskTracker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./riskTracker */ \"./client/src/reducers/riskTracker.js\");\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux */ \"./node_modules/redux/es/redux.js\");\n\n\n\nvar allReducers = Object(redux__WEBPACK_IMPORTED_MODULE_1__[\"combineReducers\"])({\n  riskTracker: _riskTracker__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n  currentAmounts: _riskTracker__WEBPACK_IMPORTED_MODULE_0__[\"default\"]\n});\n/* harmony default export */ __webpack_exports__[\"default\"] = (allReducers);\n\n//# sourceURL=webpack:///./client/src/reducers/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _riskTracker__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./riskTracker */ \"./client/src/reducers/riskTracker.js\");\n/* harmony import */ var _currentBonds__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./currentBonds */ \"./client/src/reducers/currentBonds.js\");\n/* harmony import */ var _currentLargeCap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./currentLargeCap */ \"./client/src/reducers/currentLargeCap.js\");\n/* harmony import */ var _currentMidCap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./currentMidCap */ \"./client/src/reducers/currentMidCap.js\");\n/* harmony import */ var _currentSmallCap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./currentSmallCap */ \"./client/src/reducers/currentSmallCap.js\");\n/* harmony import */ var _currentForeign__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./currentForeign */ \"./client/src/reducers/currentForeign.js\");\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! redux */ \"./node_modules/redux/es/redux.js\");\n\n\n\n\n\n\n\nvar allReducers = Object(redux__WEBPACK_IMPORTED_MODULE_6__[\"combineReducers\"])({\n  riskTracker: _riskTracker__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n  currentBonds: _currentBonds__WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  currentLargeCap: _currentLargeCap__WEBPACK_IMPORTED_MODULE_2__[\"default\"],\n  currentMidCap: _currentMidCap__WEBPACK_IMPORTED_MODULE_3__[\"default\"],\n  currentSmallCap: _currentSmallCap__WEBPACK_IMPORTED_MODULE_4__[\"default\"],\n  currentForeign: _currentForeign__WEBPACK_IMPORTED_MODULE_5__[\"default\"]\n});\n/* harmony default export */ __webpack_exports__[\"default\"] = (allReducers);\n\n//# sourceURL=webpack:///./client/src/reducers/index.js?");
 
 /***/ }),
 
