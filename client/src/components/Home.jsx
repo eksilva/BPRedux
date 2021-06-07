@@ -1,10 +1,10 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { assignRisk } from '../actions';
+import { assignRisk, assignBonds } from '../actions';
 
 const Home = () => {
   const riskTracker = useSelector(state => state.riskTracker);
-  
+
   const dispatch = useDispatch();
   return (
     <div id="Home">
@@ -19,6 +19,8 @@ const Home = () => {
       <button onClick={() => dispatch(assignRisk(8))}>8</button>
       <button onClick={() => dispatch(assignRisk(9))}>9</button>
       <button onClick={() => dispatch(assignRisk(10))}>10</button>
+
+      <input required={true} className="amount" id="bonds-input" onChange={() => dispatch(assignBonds())}></input>
     </div>
   )
 }
