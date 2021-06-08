@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 
 import allReducers from './reducers'; 
 import Home from './components/Home.jsx';
+import Calculator from './components/Calculator.jsx';
 
 // STORE
 let store = createStore(
@@ -14,7 +15,8 @@ let store = createStore(
 
 const Index = () => {
   return (
-  <Home />
+  // <Home />
+  <Calculator />
   )
 }
 

@@ -13,9 +13,9 @@
 
 ### II. Back End
 - [X] Create basic server and file structure.
-- [ ] Learn/Build Redux Store management.
-- [ ] Build risk selector input and track in store.
-- [ ] Build current allocation amount inputs and track in store
+- [X] Learn/Build Redux Store management.
+- [X] Build basic risk selector input and track in store.
+- [ ] Build basic current allocation amount inputs and track in store
 
 ### III. Front End
 - [ ] Build components for risk input/percentage output functionality
@@ -30,7 +30,7 @@
 ### I. Pages
 1. Home page
 - [ ] Home Button
-- [ ] Risk Selection Buttons
+- [X] Risk Selection Buttons
 - [ ] Modal View/Hide Button
 - [ ] Continue Button
 2. Calculator page
@@ -38,9 +38,11 @@
 - [ ] Current Amount Inputs
 
 ### II. Store Data
-- [ ] Risk selection
+- [X] Risk selection
 - [ ] Current allocation amounts
 
 ### Redux Notes
 - Store must NOT be mutated; therefore reducers must not mutate state
 - Fill new state with previous entries by mapping, changing only the entry you want to change, and return new state
+- Actions describe what you want to happen, but also interface with UI to pass inputs to reducers, which actually update state/store
+- When dealing with forms, look into mapStateToProps in react-redux, it looks like we are having conflicting states when trying to use controlled/uncontrolled components to handle inputs/submit
