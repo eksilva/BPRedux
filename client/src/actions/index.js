@@ -5,12 +5,17 @@ export const assignRisk = (risk) => {
   }
 }
 
-export const assignBonds = (amount) => {
-  return {
-    type: 'BONDS',
-    payload: amount
-  }
-}
+// export const assignBonds = (amount) => {
+//   return {
+//     type: 'BONDS',
+//     payload: amount
+//   }
+// }
+
+export const assignBonds = amount => ({
+  type: 'BONDS',
+  payload: amount
+});
 
 export const assignLargeCap = (amount) => {
   return {

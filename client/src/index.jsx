@@ -15,8 +15,10 @@ let store = createStore(
 
 const Index = () => {
   return (
-  // <Home />
-  <Calculator />
+    <div>
+      <Home />
+      <Calculator />
+    </div>
   )
 }
 
