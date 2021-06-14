@@ -17,27 +17,22 @@ export const assignBonds = amount => ({
   payload: amount
 });
 
-export const assignLargeCap = (amount) => {
-  return {
+export const assignLargeCap = amount => ({
     type: 'LARGECAP',
     payload: amount
-  }
-}
-export const assignMidCap = (amount) => {
-  return {
+});
+
+export const assignMidCap = amount => ({
     type: 'MIDCAP',
     payload: amount
-  }
-}
-export const assignSmallCap = (amount) => {
-  return {
+});
+
+export const assignSmallCap = amount => ({
     type: 'SMALLCAP',
     payload: amount
-  }
-}
-export const assignForeign = (amount) => {
-  return {
+});
+
+export const assignForeign = amount => ({
     type: 'FOREIGN',
     payload: amount
-  }
-}
+});

@@ -34,7 +34,6 @@ class Calculator extends React.Component {
   }
   
   handleSubmit(event) {
-    // event.preventDefault();
     // use actions
     this.props.assignBonds(this.state.BONDS);
     this.props.assignLargeCap(this.state.LARGECAP);
