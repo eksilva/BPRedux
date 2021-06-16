@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { assignRisk, assignBonds } from '../actions';
+import { assignRisk } from '../actions';
 
 const Home = () => {
   const riskTracker = useSelector(state => state.riskTracker);

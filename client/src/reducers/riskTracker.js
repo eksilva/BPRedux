@@ -1,4 +1,4 @@
-const riskTrackerReducer = (state = 0, action) => {
+const riskTrackerReducer = (state = 1, action) => {
   switch(action.type) {
     case "ASSIGNRISK":
       state = action.payload;

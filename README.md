@@ -2,7 +2,7 @@
 >**BPRedux** is a trivial financial calculator based on desired risks/outcomes, outputting suggested allocation of funds. BPRedux is also a project for me to learn **Redux** state management.
 
 ## **Project Status**
-*In development. (0.1.0)*
+*In development. (0.1.5)*
 
 ## **Development Roadmap**
 
@@ -15,7 +15,7 @@
 - [X] Create basic server and file structure.
 - [X] Learn/Build Redux Store management.
 - [X] Build basic risk selector input and track in store.
-- [ ] Build basic current allocation amount inputs and track in store
+- [X] Build basic current allocation amount inputs and track in store
 
 ### III. Front End
 - [ ] Build components for risk input/percentage output functionality
@@ -35,11 +35,12 @@
 - [ ] Continue Button
 2. Calculator page
 - [ ] Home Button
-- [ ] Current Amount Inputs
+- [X] Current Amount Inputs
+- [X] Calculate Button
 
 ### II. Store Data
 - [X] Risk selection
-- [ ] Current allocation amounts
+- [X] Current allocation amounts
 
 ### Redux Notes
 - Store must NOT be mutated; therefore reducers must not mutate state

@@ -1,16 +1,7 @@
-export const assignRisk = (risk) => {
-  return {
-    type: 'ASSIGNRISK',
-    payload: risk
-  }
-}
-
-// export const assignBonds = (amount) => {
-//   return {
-//     type: 'BONDS',
-//     payload: amount
-//   }
-// }
+export const assignRisk = risk => ({
+  type: 'ASSIGNRISK',
+  payload: risk
+});
 
 export const assignBonds = amount => ({
   type: 'BONDS',

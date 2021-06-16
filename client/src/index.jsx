@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import allReducers from './reducers'; 
 import Home from './components/Home.jsx';
 import Calculator from './components/Calculator.jsx';
+import AmountChanges from './components/AmountChanges.jsx';
 
 // STORE
 let store = createStore(
@@ -18,6 +19,7 @@ const Index = () => {
     <div>
       <Home />
       <Calculator />
+      <AmountChanges />
     </div>
   )
 }
