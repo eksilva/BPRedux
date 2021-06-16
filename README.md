@@ -46,4 +46,7 @@
 - Store must NOT be mutated; therefore reducers must not mutate state
 - Fill new state with previous entries by mapping, changing only the entry you want to change, and return new state
 - Actions describe what you want to happen, but also interface with UI to pass inputs to reducers, which actually update state/store
-- When dealing with forms, look into mapStateToProps in react-redux, it looks like we are having conflicting states when trying to use controlled/uncontrolled components to handle inputs/submit
+- When dealing with forms, usual class component with local state can be used, but react-redux connect function must be called upon exporting the component:
+```javascript
+export default connect(null, {*action*,*action*,...})(*component*);
+``` 
