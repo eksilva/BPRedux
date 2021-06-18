@@ -17,9 +17,14 @@ let store = createStore(
 const Index = () => {
   return (
     <div>
-      <Home />
-      <Calculator />
-      <AmountChanges />
+      <div id="banner">Financial Advisor</div>
+      <div id="index-wrap">
+        <div id="content-wrap">
+          <Home />
+          <Calculator />
+          <AmountChanges />
+        </div>
+      </div>
     </div>
   )
 }

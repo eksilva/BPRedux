@@ -40,7 +40,8 @@ class Calculator extends React.Component {
 
   render() {
     return (
-      <div id="Calculator">
+      <div id="calculator">
+        <div>2. Please Input Current Allocation Amounts Per Category</div>
         <label htmlFor="bonds">Bonds:</label>
         <input required={true} className="amount" id="BONDS" name="bonds" type="text" onChange={e => this.handleChange(e.target)}></input>
 
@@ -55,7 +56,7 @@ class Calculator extends React.Component {
 
         <label htmlFor="foreign">Foreign:</label>
         <input required={true} className="amount" id="FOREIGN" name="foreign" type="text" onChange={e => this.handleChange(e.target)}></input>
-        <button onClick={this.handleSubmit}>Calculate</button>
+        <button className="amount" onClick={this.handleSubmit}>Calculate</button>
       </div>
     )
   }
