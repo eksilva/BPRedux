@@ -8,6 +8,10 @@ body {
   width: 120px;
 }
 
+.instructions {
+  padding-bottom: 2%;
+}
+
 .risk-button {
   width: 40px;
   height: 40px;
@@ -17,7 +21,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2%
 }
 
 .selected-risk-button {
@@ -28,6 +31,7 @@ body {
   background: #0084bf;
   background-image: linear-gradient(45deg, #0084bf, #0c8996);
   font-size: 4rem;
+  text-align: center;
   color: ghostwhite;
   display: flex;
   justify-content: center;
@@ -43,7 +47,7 @@ body {
 }
 
 #calculator {
-  margin: 1%;
+  margin: 1% 1% 5% 1%;
   display: flex;
   flex-direction: column;
 }
@@ -70,4 +74,43 @@ body {
     flex-direction: column;
   }
   
+}
+
+@media screen and (max-width : 400px) {
+  #banner {
+    background: #0084bf;
+    background-image: linear-gradient(45deg, #0084bf, #0c8996);
+    font-size: 2rem;
+    text-align: center;
+    color: ghostwhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2%;
+    height: 100px;
+    border: 1px solid grey;
+  }
+
+  #content-wrap {
+    padding: 1%;
+    width: 90%
+  }
+
+  #risk-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 3px;
+  }
+
+  .risk-button {
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

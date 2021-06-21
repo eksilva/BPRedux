@@ -31,7 +31,6 @@ const AmountChanges = () => {
   const amountBoxes = newAmounts.map((amount,index) => 
     <li key={index}>{amount}</li>
   );
-  console.log(valueArray,newAmounts);
   const deltaAmounts = newAmounts.map((item, index) => {
     return item - valueArray[index];
   })

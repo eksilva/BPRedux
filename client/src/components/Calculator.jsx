@@ -10,11 +10,11 @@ class Calculator extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      BONDS: '',
-      LARGECAP: '',
-      MIDCAP: '',
-      SMALLCAP: '',
-      FOREIGN: '',
+      BONDS: 100,
+      LARGECAP: 100,
+      MIDCAP: 100,
+      SMALLCAP: 100,
+      FOREIGN: 100,
      };
 
     this.handleChange = this.handleChange.bind(this);
@@ -41,21 +41,21 @@ class Calculator extends React.Component {
   render() {
     return (
       <div id="calculator">
-        <div>2. Please Input Current Allocation Amounts Per Category</div>
+        <div className="instructions">2. Input Current Allocation Amounts Per Category</div>
         <label htmlFor="bonds">Bonds:</label>
-        <input required={true} className="amount" id="BONDS" name="bonds" type="text" onChange={e => this.handleChange(e.target)}></input>
+        <input required={true} value={this.state.BONDS} className="amount" id="BONDS" name="bonds" type="text" onChange={e => this.handleChange(e.target)}></input>
 
         <label htmlFor="largecap">LargeCap:</label>
-        <input required={true} className="amount" id="LARGECAP" name="largecap" type="text" onChange={e => this.handleChange(e.target)}></input>
+        <input required={true} value={this.state.LARGECAP} className="amount" id="LARGECAP" name="largecap" type="text" onChange={e => this.handleChange(e.target)}></input>
 
         <label htmlFor="midcap">MidCap:</label>
-        <input required={true} className="amount" id="MIDCAP" name="midcap" type="text" onChange={e => this.handleChange(e.target)}></input>
+        <input required={true} value={this.state.MIDCAP} className="amount" id="MIDCAP" name="midcap" type="text" onChange={e => this.handleChange(e.target)}></input>
 
         <label htmlFor="smallcap">SmallCap:</label>
-        <input required={true} className="amount" id="SMALLCAP" name="smallcap" type="text" onChange={e => this.handleChange(e.target)}></input>
+        <input required={true} value={this.state.SMALLCAP} className="amount" id="SMALLCAP" name="smallcap" type="text" onChange={e => this.handleChange(e.target)}></input>
 
         <label htmlFor="foreign">Foreign:</label>
-        <input required={true} className="amount" id="FOREIGN" name="foreign" type="text" onChange={e => this.handleChange(e.target)}></input>
+        <input required={true} value={this.state.FOREIGN} className="amount" id="FOREIGN" name="foreign" type="text" onChange={e => this.handleChange(e.target)}></input>
         <button className="amount" onClick={this.handleSubmit}>Calculate</button>
       </div>
     )

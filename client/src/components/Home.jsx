@@ -26,10 +26,10 @@ const Home = () => {
 
   return (
     <div id="Home">
-      <div>1. Select A Risk Level</div>
+      <div className="instructions">1. Select A Risk Level (Low -{'>'} High)</div>
 
       <div id="risk-buttons">
-        <div className="risk-button" id="rb1" onClick={(event) => highlight(event)}>1</div>
+        <div className="risk-button selected-risk-button" id="rb1" onClick={(event) => highlight(event)}>1</div>
         <div className="risk-button" id="rb2" onClick={(event) => highlight(event)}>2</div>
         <div className="risk-button" id="rb3" onClick={() => {dispatch(assignRisk(3))}, (event) => highlight(event)}>3</div>
         <div className="risk-button" id="rb4" onClick={() => {dispatch(assignRisk(4))}, (event) => highlight(event)}>4</div>
