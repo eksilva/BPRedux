@@ -6,21 +6,39 @@ const Home = () => {
   const riskTracker = useSelector(state => state.riskTracker);
 
   const dispatch = useDispatch();
+
+  const injectStyle = (id) => {
+    //document.getElementById(id).classList.remove('risk-button');
+    document.getElementById(id).classList.add('selected-risk-button');
+  }
+  
+  const rejectStyle = (id) => {
+    document.getElementById(id).classList.remove('selected-risk-button');
+    //document.getElementById(id).classList.add('risk-button');
+  }
+
+  const highlight = (event) => {
+    rejectStyle(`rb${riskTracker}`);
+    let val = Number(event.target.innerHTML);
+    dispatch(assignRisk(val));
+    injectStyle(event.target.id);
+  }
+
   return (
     <div id="Home">
-      <div>1. Please Select A Risk Level</div>
-      <div>Risk Selected: {riskTracker}</div>
+      <div>1. Select A Risk Level</div>
+
       <div id="risk-buttons">
-        <div className="risk-button" onClick={() => {dispatch(assignRisk(1)); {/*cssFunc()*/}}}>1</div>
-        <div className="risk-button" onClick={() => dispatch(assignRisk(2))}>2</div>
-        <div className="risk-button" onClick={() => dispatch(assignRisk(3))}>3</div>
-        <div className="risk-button" onClick={() => dispatch(assignRisk(4))}>4</div>
-        <div className="risk-button" onClick={() => dispatch(assignRisk(5))}>5</div>
-        <div className="risk-button" onClick={() => dispatch(assignRisk(6))}>6</div>
-        <div className="risk-button" onClick={() => dispatch(assignRisk(7))}>7</div>
-        <div className="risk-button" onClick={() => dispatch(assignRisk(8))}>8</div>
-        <div className="risk-button" onClick={() => dispatch(assignRisk(9))}>9</div>
-        <div className="risk-button" onClick={() => dispatch(assignRisk(10))}>10</div>
+        <div className="risk-button" id="rb1" onClick={(event) => highlight(event)}>1</div>
+        <div className="risk-button" id="rb2" onClick={(event) => highlight(event)}>2</div>
+        <div className="risk-button" id="rb3" onClick={() => {dispatch(assignRisk(3))}, (event) => highlight(event)}>3</div>
+        <div className="risk-button" id="rb4" onClick={() => {dispatch(assignRisk(4))}, (event) => highlight(event)}>4</div>
+        <div className="risk-button" id="rb5" onClick={() => {dispatch(assignRisk(5))}, (event) => highlight(event)}>5</div>
+        <div className="risk-button" id="rb6" onClick={() => {dispatch(assignRisk(6))}, (event) => highlight(event)}>6</div>
+        <div className="risk-button" id="rb7" onClick={() => {dispatch(assignRisk(7))}, (event) => highlight(event)}>7</div>
+        <div className="risk-button" id="rb8" onClick={() => {dispatch(assignRisk(8))}, (event) => highlight(event)}>8</div>
+        <div className="risk-button" id="rb9" onClick={() => {dispatch(assignRisk(9))}, (event) => highlight(event)}>9</div>
+        <div className="risk-button" id="rb10" onClick={() => {dispatch(assignRisk(10))}, (event) => highlight(event)}>10</div>
       </div>
     </div>
   )
