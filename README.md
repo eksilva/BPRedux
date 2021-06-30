@@ -2,7 +2,7 @@
 >**BPRedux** is a trivial financial advising calculator based on desired risks/outcomes, outputting suggested allocation of funds. BPRedux is also a project for me to learn **Redux** *(React-Redux)* state management.
 
 ## **Project Status**
-*(1.0.0)*
+*(1.5.0)*
 
 ## **Development Roadmap**
 
