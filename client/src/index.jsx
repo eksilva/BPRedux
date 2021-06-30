@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import allReducers from './reducers'; 
 import Home from './components/Home.jsx';
 import Calculator from './components/Calculator.jsx';
-import AmountChanges from './components/AmountChanges.jsx';
+
 
 // STORE
 let store = createStore(
@@ -20,9 +20,10 @@ const Index = () => {
       <div id="banner">Financial Advisor</div>
       <div id="index-wrap">
         <div id="content-wrap">
+          <div className="instructions">1. Select A Risk Level (Low -{'>'} High)</div>
           <Home />
+          <div className="instructions">2. Input Current Allocation Amounts Per Category</div>
           <Calculator />
-          <AmountChanges />
         </div>
       </div>
     </div>

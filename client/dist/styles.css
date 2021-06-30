@@ -4,12 +4,30 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.amount {
+/* label {
+   text-align: right; 
+  clear: both;
+  float:left;
+  margin-right:15px;
+} */
+
+.allocation-input {
+  display: flex;
+  flex-direction: row;
+  padding: 18px 0px 0px 0px;
+}
+
+.amount-input {
   width: 120px;
+}
+
+.change {
+  margin: 20px;
 }
 
 .instructions {
   padding-bottom: 2%;
+  font-size: 25px;
 }
 
 .risk-button {
@@ -25,6 +43,12 @@ body {
 
 .selected-risk-button {
   background-color: chartreuse;
+}
+
+#amount-deltas {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
 }
 
 #banner {
@@ -47,9 +71,9 @@ body {
 }
 
 #calculator {
-  margin: 1% 1% 5% 1%;
   display: flex;
   flex-direction: column;
+  font-size: 20px;
 }
 
 
@@ -63,9 +87,13 @@ body {
 #risk-buttons {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
+#section-two {
+  display: flex;
+  justify-content: space-evenly;
+}
 
 @media screen {
   #Home {
@@ -76,7 +104,7 @@ body {
   
 }
 
-@media screen and (max-width : 400px) {
+@media screen and (max-width : 500px) {
   #banner {
     background: #0084bf;
     background-image: linear-gradient(45deg, #0084bf, #0c8996);

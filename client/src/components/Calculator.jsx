@@ -5,6 +5,8 @@ import { assignBonds,
          assignMidCap,
          assignSmallCap,
          assignForeign } from '../actions';
+import AmountDeltas from './AmountDeltas.jsx';
+import AmountChanges from './AmountChanges.jsx';
 
 class Calculator extends React.Component {
   constructor(props) {
@@ -40,23 +42,37 @@ class Calculator extends React.Component {
 
   render() {
     return (
-      <div id="calculator">
-        <div className="instructions">2. Input Current Allocation Amounts Per Category</div>
-        <label htmlFor="bonds">Bonds:</label>
-        <input required={true} value={this.state.BONDS} className="amount" id="BONDS" name="bonds" type="text" onChange={e => this.handleChange(e.target)}></input>
+      <div id="section-two">
+        <div id="calculator">
+          Current Allocations:
+          <div className="allocation-input">
+            <label htmlFor="bonds">Bonds:</label>
+            <input required={true} value={this.state.BONDS} className="amount-input" id="BONDS" name="bonds" type="text" onChange={e => this.handleChange(e.target)}></input>
+          </div>
 
-        <label htmlFor="largecap">LargeCap:</label>
-        <input required={true} value={this.state.LARGECAP} className="amount" id="LARGECAP" name="largecap" type="text" onChange={e => this.handleChange(e.target)}></input>
+          <div className="allocation-input">
+            <label htmlFor="largecap">LargeCap:</label>
+            <input required={true} value={this.state.LARGECAP} className="amount-input" id="LARGECAP" name="largecap" type="text" onChange={e => this.handleChange(e.target)}></input>
+          </div>
 
-        <label htmlFor="midcap">MidCap:</label>
-        <input required={true} value={this.state.MIDCAP} className="amount" id="MIDCAP" name="midcap" type="text" onChange={e => this.handleChange(e.target)}></input>
+          <div className="allocation-input">
+            <label htmlFor="midcap">MidCap:</label>
+            <input required={true} value={this.state.MIDCAP} className="amount-input" id="MIDCAP" name="midcap" type="text" onChange={e => this.handleChange(e.target)}></input>
+          </div>
 
-        <label htmlFor="smallcap">SmallCap:</label>
-        <input required={true} value={this.state.SMALLCAP} className="amount" id="SMALLCAP" name="smallcap" type="text" onChange={e => this.handleChange(e.target)}></input>
+          <div className="allocation-input">
+            <label htmlFor="smallcap">SmallCap:</label>
+            <input required={true} value={this.state.SMALLCAP} className="amount-input" id="SMALLCAP" name="smallcap" type="text" onChange={e => this.handleChange(e.target)}></input>
+          </div>
 
-        <label htmlFor="foreign">Foreign:</label>
-        <input required={true} value={this.state.FOREIGN} className="amount" id="FOREIGN" name="foreign" type="text" onChange={e => this.handleChange(e.target)}></input>
-        <button className="amount" onClick={this.handleSubmit}>Calculate</button>
+          <div className="allocation-input">
+            <label htmlFor="foreign">Foreign:</label>
+            <input required={true} value={this.state.FOREIGN} className="amount-input" id="FOREIGN" name="foreign" type="text" onChange={e => this.handleChange(e.target)}></input>
+          </div>
+          <button className="amount-input" onClick={this.handleSubmit}>Rebalance</button>
+        </div>
+        <AmountDeltas />
+        <AmountChanges />
       </div>
     )
   }
