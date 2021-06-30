@@ -5,6 +5,10 @@
 *(1.5.0)* 
 View latest stable version on [Heroku](http://fin-react-redux.herokuapp.com/).
 
+### Current Issues
+- Smaller mobile browser widths are not optimized yet.
+- Amounts rendering (delta and reallocated) are out of order upon dispatching action to update store.
+
 ## **Development Roadmap**
 
 ### I. Project Setup
