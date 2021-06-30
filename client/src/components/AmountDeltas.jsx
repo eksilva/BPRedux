@@ -20,11 +20,11 @@ const AmountDeltas = (props) => {
 
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    for (let i = 0; i < changeActions.length; i++) {
-      dispatch(changeActions[i](newAmounts[i]));
-    };  
-  }, [dispatch]);
+  // useEffect(() => {
+  //   for (let i = 0; i < changeActions.length; i++) {
+  //     dispatch(changeActions[i](newAmounts[i]));
+  //   };  
+  // }, [dispatch]);
 
   const risks = {
     1: [0.80, 0.20, 0, 0, 0],
@@ -48,6 +48,10 @@ const AmountDeltas = (props) => {
   const deltaAmounts = newAmounts.map((item, index) => {
     return item - valueArray[index];
   });
+
+  for (let i = 0; i < changeActions.length; i++) {
+    dispatch(changeActions[i](newAmounts[i]));
+  }; 
   
   return (
     <div id="amount-deltas">

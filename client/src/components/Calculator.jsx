@@ -70,7 +70,7 @@ class Calculator extends React.Component {
             <label htmlFor="foreign">Foreign:</label>
             <input required={true} value={this.state.FOREIGN} className="amount-input" id="FOREIGN" name="foreign" type="text" onChange={e => this.handleChange(e.target)}></input>
           </div>
-          <input type="button" value="Rebalance" className="allocation-input" onClick={this.handleSubmit}></input>
+          <div value="Rebalance" id="rebalance-button" className="allocation-input" onClick={this.handleSubmit}>Rebalance</div>
         </div>
         <AmountDeltas />
         <NewAmounts />
