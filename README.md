@@ -20,10 +20,10 @@
 ### III. Front End
 - [ ] Build components for risk input/percentage output functionality
 - [ ] Build pie chart graphic displaying visual allocation percentages 
-- [ ] Build components for fund allocation amount inputs/reallocated amounts
+- [X] Build components for fund allocation amount inputs/reallocated amounts
 
 ### IV. Deployment
-- [ ] Deploy to heroku free-tier hosting platform
+- [X] Deploy to heroku free-tier hosting platform
 
 ## **Engineering Journal**
 
@@ -41,6 +41,7 @@
 ### II. Store Data
 - [X] Risk selection
 - [X] Current allocation amounts
+- [X] New allocation amounts 
 
 ### Redux Notes
 - Store must NOT be mutated; therefore reducers must not mutate state
