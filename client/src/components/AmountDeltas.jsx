@@ -1,8 +1,13 @@
 import React from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { changeBonds, changeLargeCap, changeMidCap, changeSmallCap, changeForeign } from '../actions';
+import { changeBonds, 
+         changeLargeCap, 
+         changeMidCap, 
+         changeSmallCap, 
+         changeForeign } from '../actions';
 
-const AmountDeltas = () => {
+const AmountDeltas = (props) => {
   const riskTracker = useSelector(state => state.riskTracker);
 
   const currentBonds = useSelector(state => state.currentBonds);
@@ -14,6 +19,12 @@ const AmountDeltas = () => {
   const changeActions = [changeBonds, changeLargeCap, changeMidCap, changeSmallCap, changeForeign];
 
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    for (let i = 0; i < changeActions.length; i++) {
+      dispatch(changeActions[i](newAmounts[i]));
+    };  
+  }, [dispatch]);
 
   const risks = {
     1: [0.80, 0.20, 0, 0, 0],
@@ -33,10 +44,6 @@ const AmountDeltas = () => {
   const totalValue = valueArray.reduce((a,b) => a + b);
 
   const newAmounts = risks[riskTracker].map(percent => Number(Number(percent * totalValue).toFixed(2)));
-  
-  for (let i = 0; i < changeActions.length; i++) {
-    dispatch(changeActions[i](newAmounts[i]));
-  }
 
   const deltaAmounts = newAmounts.map((item, index) => {
     return item - valueArray[index];

@@ -6,7 +6,8 @@ import { assignBonds,
          assignSmallCap,
          assignForeign } from '../actions';
 import AmountDeltas from './AmountDeltas.jsx';
-import AmountChanges from './AmountChanges.jsx';
+import NewAmounts from './NewAmounts.jsx';
+
 
 class Calculator extends React.Component {
   constructor(props) {
@@ -69,10 +70,10 @@ class Calculator extends React.Component {
             <label htmlFor="foreign">Foreign:</label>
             <input required={true} value={this.state.FOREIGN} className="amount-input" id="FOREIGN" name="foreign" type="text" onChange={e => this.handleChange(e.target)}></input>
           </div>
-          <button className="amount-input" onClick={this.handleSubmit}>Rebalance</button>
+          <input type="button" value="Rebalance" className="allocation-input" onClick={this.handleSubmit}></input>
         </div>
         <AmountDeltas />
-        <AmountChanges />
+        <NewAmounts />
       </div>
     )
   }

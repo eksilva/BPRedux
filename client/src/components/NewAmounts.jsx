@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 
-const AmountChanges = () => {
+const NewAmounts = (props) => {
 
   const newBonds = useSelector(state => state.newBonds);
   const newLargeCap = useSelector(state => state.newLargeCap);
@@ -22,4 +22,4 @@ const AmountChanges = () => {
   )
 };
 
-export default AmountChanges;
+export default NewAmounts;
