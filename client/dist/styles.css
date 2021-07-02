@@ -43,6 +43,7 @@ input {
   display: flex;
   justify-content: space-between;
   font-size: 20px;
+  margin-right: 20px;
 }
 
 #banner {
@@ -69,6 +70,7 @@ input {
   display: flex;
   flex-direction: column;
   font-size: 20px;
+  margin-right: 20px;
 }
 
 
@@ -81,6 +83,7 @@ input {
 #new-amounts {
   font-size: 20px;
 }
+
 #rebalance-button {
   border: 2px solid grey;
   border-radius: 4px;
@@ -143,11 +146,63 @@ input {
   .risk-button {
     width: 30px;
     height: 30px;
-    border: 2px solid black;
-    border-radius: 4px;
-    font-size: 20px;
+  }
+}
+
+@media screen and (max-width : 400px) {
+  #amount-deltas {
+    font-size: 15px;
+  }
+
+  #banner {
+    font-size: 2rem;    
+  }
+
+  #calculator {
+    font-size: 15px;
+    margin-right: 18px;
+  }
+
+  #content-wrap {
+    padding: 1%;
+    width: 90%
+  }
+
+  #index-wrap {
+    margin: 2px;
+  }
+
+  #new-amounts {
+    font-size: 15px;
+  }
+
+  #rebalance-button {
+    text-align: center;
+    width: 80px;
+  }
+
+  #risk-buttons {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 3px;
+  }
+
+  .allocation-input {
+    padding: 15px 0px 0px 0px;
+  }
+
+  #BONDS {
+    margin-top: 17px;
+  }
+
+  .instructions {
+    padding-bottom: 4%;
+    font-size: 20px;
+  }
+
+  .risk-button {
+    width: 34px;
+    height: 28px;
   }
 }

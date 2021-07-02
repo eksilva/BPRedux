@@ -4,11 +4,11 @@ import { useSelector } from 'react-redux';
 
 const NewAmounts = (props) => {
 
-  const newBonds = useSelector(state => state.newBonds);
-  const newLargeCap = useSelector(state => state.newLargeCap);
-  const newMidCap = useSelector(state => state.newMidCap);
-  const newSmallCap = useSelector(state => state.newSmallCap);
-  const newForeign = useSelector(state => state.newForeign);
+  const newBonds = useSelector(state => state.newBonds).toFixed(2);
+  const newLargeCap = useSelector(state => state.newLargeCap).toFixed(2);
+  const newMidCap = useSelector(state => state.newMidCap).toFixed(2);
+  const newSmallCap = useSelector(state => state.newSmallCap).toFixed(2);
+  const newForeign = useSelector(state => state.newForeign).toFixed(2);
 
   return (
     <div id="new-amounts">

@@ -13,11 +13,11 @@ class Calculator extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      BONDS: 100,
-      LARGECAP: 100,
-      MIDCAP: 100,
-      SMALLCAP: 100,
-      FOREIGN: 100,
+      BONDS: 100.00,
+      LARGECAP: 100.00,
+      MIDCAP: 100.00,
+      SMALLCAP: 100.00,
+      FOREIGN: 100.00,
      };
 
     this.handleChange = this.handleChange.bind(this);
@@ -46,9 +46,9 @@ class Calculator extends React.Component {
       <div id="section-two">
         <div id="calculator">
           Current Allocations:
-          <div className="allocation-input">
+          <div className="allocation-input" id="BONDS">
             <label htmlFor="bonds">Bonds:</label>
-            <input type="number" required={true} value={this.state.BONDS} className="amount-input" id="BONDS" name="bonds" onChange={e => this.handleChange(e.target)}></input>
+            <input type="number" required={true} value={this.state.BONDS} className="amount-input" id="bonds-input" name="bonds" onChange={e => this.handleChange(e.target)}></input>
           </div>
 
           <div className="allocation-input">
@@ -70,7 +70,7 @@ class Calculator extends React.Component {
             <label htmlFor="foreign">Foreign:</label>
             <input type="number" required={true} value={this.state.FOREIGN} className="amount-input" id="FOREIGN" name="foreign" onChange={e => this.handleChange(e.target)}></input>
           </div>
-          <div value="Rebalance" id="rebalance-button" className="allocation-input" onClick={this.handleSubmit}>Rebalance</div>
+          <div value="Rebalance" id="rebalance-button" className="" onClick={this.handleSubmit}>Rebalance</div>
         </div>
         <AmountDeltas />
         <NewAmounts />
