@@ -2,8 +2,8 @@
 >**BPRedux** is a trivial financial advising calculator based on desired risks/outcomes, outputting suggested allocation of funds. BPRedux is also a project for me to learn **Redux** *(React-Redux)* state management.
 
 ## **Project Status**
-*(1.5.0)* 
-View latest stable version on [Heroku](http://fin-react-redux.herokuapp.com/).
+*(1.5.1)* 
+View latest version on [Heroku](http://fin-react-redux.herokuapp.com/).
 
 ### Current Issues
 - Smaller mobile browser widths are not optimized yet.

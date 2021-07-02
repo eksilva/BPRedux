@@ -25,11 +25,11 @@ class Calculator extends React.Component {
   }
 
   handleChange(target) {
-    const value = target.value;
+    const value = Number(target.value);
     const id = target.id;
     this.setState({
-      [id]: Number(value),
-    })
+      [id]: value,
+    });
   }
   
   handleSubmit(event) {
@@ -48,27 +48,27 @@ class Calculator extends React.Component {
           Current Allocations:
           <div className="allocation-input">
             <label htmlFor="bonds">Bonds:</label>
-            <input required={true} value={this.state.BONDS} className="amount-input" id="BONDS" name="bonds" type="text" onChange={e => this.handleChange(e.target)}></input>
+            <input type="number" required={true} value={this.state.BONDS} className="amount-input" id="BONDS" name="bonds" onChange={e => this.handleChange(e.target)}></input>
           </div>
 
           <div className="allocation-input">
             <label htmlFor="largecap">LargeCap:</label>
-            <input required={true} value={this.state.LARGECAP} className="amount-input" id="LARGECAP" name="largecap" type="text" onChange={e => this.handleChange(e.target)}></input>
+            <input type="number" required={true} value={this.state.LARGECAP} className="amount-input" id="LARGECAP" name="largecap" onChange={e => this.handleChange(e.target)}></input>
           </div>
 
           <div className="allocation-input">
             <label htmlFor="midcap">MidCap:</label>
-            <input required={true} value={this.state.MIDCAP} className="amount-input" id="MIDCAP" name="midcap" type="text" onChange={e => this.handleChange(e.target)}></input>
+            <input type="number" required={true} value={this.state.MIDCAP} className="amount-input" id="MIDCAP" name="midcap" onChange={e => this.handleChange(e.target)}></input>
           </div>
 
           <div className="allocation-input">
             <label htmlFor="smallcap">SmallCap:</label>
-            <input required={true} value={this.state.SMALLCAP} className="amount-input" id="SMALLCAP" name="smallcap" type="text" onChange={e => this.handleChange(e.target)}></input>
+            <input type="number" required={true} value={this.state.SMALLCAP} className="amount-input" id="SMALLCAP" name="smallcap" onChange={e => this.handleChange(e.target)}></input>
           </div>
 
           <div className="allocation-input">
             <label htmlFor="foreign">Foreign:</label>
-            <input required={true} value={this.state.FOREIGN} className="amount-input" id="FOREIGN" name="foreign" type="text" onChange={e => this.handleChange(e.target)}></input>
+            <input type="number" required={true} value={this.state.FOREIGN} className="amount-input" id="FOREIGN" name="foreign" onChange={e => this.handleChange(e.target)}></input>
           </div>
           <div value="Rebalance" id="rebalance-button" className="allocation-input" onClick={this.handleSubmit}>Rebalance</div>
         </div>

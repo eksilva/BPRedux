@@ -46,7 +46,7 @@ const AmountDeltas = (props) => {
   const newAmounts = risks[riskTracker].map(percent => Number(Number(percent * totalValue).toFixed(2)));
 
   const deltaAmounts = newAmounts.map((item, index) => {
-    return item - valueArray[index];
+    return (item - valueArray[index]).toFixed(2);
   });
 
   for (let i = 0; i < changeActions.length; i++) {
