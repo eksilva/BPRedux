@@ -13,11 +13,11 @@ class Calculator extends React.Component {
   constructor(props) {
     super(props);
     this.state = { 
-      BONDS: 100.00,
-      LARGECAP: 100.00,
-      MIDCAP: 100.00,
-      SMALLCAP: 100.00,
-      FOREIGN: 100.00,
+      BONDS: 100,
+      LARGECAP: 100,
+      MIDCAP: 100,
+      SMALLCAP: 100,
+      FOREIGN: 100,
      };
 
     this.handleChange = this.handleChange.bind(this);
@@ -46,9 +46,9 @@ class Calculator extends React.Component {
       <div id="section-two">
         <div id="calculator">
           Current Allocations:
-          <div className="allocation-input" id="BONDS">
+          <div className="allocation-input" id="first-input">
             <label htmlFor="bonds">Bonds:</label>
-            <input type="number" required={true} value={this.state.BONDS} className="amount-input" id="bonds-input" name="bonds" onChange={e => this.handleChange(e.target)}></input>
+            <input type="number" required={true} value={this.state.BONDS} className="amount-input" id="BONDS" name="bonds" onChange={e => this.handleChange(e.target)} />
           </div>
 
           <div className="allocation-input">
