@@ -49,9 +49,14 @@ const AmountDeltas = (props) => {
 
   const changeColor = (element) => {
     if (Number(element.innerHTML) > 0) {
+      element.classList.remove('negative-delta');
       element.classList.add('positive-delta');
     } else if (Number(element.innerHTML) < 0) {
+      element.classList.remove('positive-delta');
       element.classList.add('negative-delta');
+    } else {
+      element.classList.remove('positive-delta');
+      element.classList.remove('negative-delta');
     }
   };
 
