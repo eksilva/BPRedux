@@ -24,6 +24,14 @@ input {
   font-size: 25px;
 }
 
+.negative-delta {
+  color: red;
+}
+
+.positive-delta {
+  color: rgb(98, 143, 32);
+}
+
 .risk-button {
   width: 40px;
   height: 40px;

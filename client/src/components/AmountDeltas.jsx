@@ -20,12 +20,6 @@ const AmountDeltas = (props) => {
 
   const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   for (let i = 0; i < changeActions.length; i++) {
-  //     dispatch(changeActions[i](newAmounts[i]));
-  //   };  
-  // }, [dispatch]);
-
   const risks = {
     1: [0.80, 0.20, 0, 0, 0],
     2: [0.70, 0.15, 0.15, 0, 0],
@@ -52,7 +46,24 @@ const AmountDeltas = (props) => {
   for (let i = 0; i < changeActions.length; i++) {
     dispatch(changeActions[i](newAmounts[i]));
   }; 
-  
+
+  const changeColor = (element) => {
+    if (Number(element.innerHTML) > 0) {
+      element.classList.add('positive-delta');
+    } else if (Number(element.innerHTML) < 0) {
+      element.classList.add('negative-delta');
+    }
+  };
+
+  useEffect(() => {
+    const ids = ["delta-bonds", "delta-largecap", "delta-midcap", "delta-smallcap", "delta-foreign"];
+    changeColor(document.getElementById(ids[0].toString()));
+    changeColor(document.getElementById(ids[1].toString()));
+    changeColor(document.getElementById(ids[2].toString()));
+    changeColor(document.getElementById(ids[3].toString()));
+    changeColor(document.getElementById(ids[4].toString()));
+  });
+
   return (
     <div id="amount-deltas">
       <div id="deltas">

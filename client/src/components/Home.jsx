@@ -8,13 +8,11 @@ const Home = () => {
   const dispatch = useDispatch();
 
   const injectStyle = (id) => {
-    //document.getElementById(id).classList.remove('risk-button');
     document.getElementById(id).classList.add('selected-risk-button');
   }
   
   const rejectStyle = (id) => {
     document.getElementById(id).classList.remove('selected-risk-button');
-    //document.getElementById(id).classList.add('risk-button');
   }
 
   const highlight = (event) => {
